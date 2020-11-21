@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Data Update</h4>
+
+    <form action=" {{ url_for('update') }}" method="POST">
+        <h3>Student Information</h3>
+       
+        <input type="text" name="id" value=" {{ data[0] }}" hidden /> </br>
+        Name<br>
+        <input type="text" name="name" value=" {{ data[1] }} " /> </br>
+
+        Address<br>
+        <textarea name="add" >  {{ data[2] }} </textarea><br>
+
+        City<br>
+        <input type="text" name="city"  value=" {{ data[3] }} " /><br>
+
+        PINCODE<br>
+        <input type="text" name="pin" value=" {{ data[4] }} " /><br>
+        <input type="submit" value="submit" /><br>
+    </form>
+</body>
+</html>
